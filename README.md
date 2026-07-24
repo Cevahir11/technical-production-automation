@@ -1,71 +1,80 @@
-# technical-production-automation
-A PHP-based web automation system that combines technical drawing generation, contract creation, and manufacturing approval workflows in a single dashboard.
+
 # Technical Production Automation
 
-PHP tabanlı teknik çizim, sözleşme oluşturma ve imalat onay süreçlerini tek bir web panelinde birleştiren otomasyon sistemi.
+PHP tabanlı teknik çizim, sözleşme oluşturma ve imalat onay süreçlerini tek bir web panelinde birleştiren üretim otomasyon sistemidir.
 
-Bu proje, teklif ve proje bilgilerinin işlenmesini kolaylaştırmak, tekrarlanan işlemleri azaltmak ve teknik belgelerin daha hızlı hazırlanmasını sağlamak amacıyla geliştirilmiştir.
-
----
-
-## Ana Panel
-
-![Ana Panel](assets/bg.jpg)
-
-Sistem iki temel modülden oluşmaktadır:
-
-- Teknik Çizim ve Sözleşme Modülü
-- İmalat Onay Formu Modülü
+Proje; teklif ve proje bilgilerinin daha hızlı işlenmesini, teknik belgelerin standart şekilde hazırlanmasını ve tekrar eden işlemlerin azaltılmasını amaçlamaktadır.
 
 ---
 
-## Teknik Çizim ve Sözleşme Modülü
+## Uygulama Görselleri
 
-![Teknik Çizim Modülü](assets/teknik.jpg)
+### Ana Panel
 
-Teknik modül, teklif ve sözleşme belgelerindeki bilgilerin işlenerek teknik çıktılara dönüştürülmesini sağlar.
+Ana panel üzerinden teknik çizim ve imalat onay modüllerine erişilebilir.
 
-### Özellikler
+![Ana Panel](ana-panel.png)
+
+---
+
+### Teknik Çizim ve Sözleşme Modülü
+
+PDF teklif veya sözleşme dosyaları yüklenerek müşteri, ürün, ölçü ve proje bilgileri otomatik şekilde işlenebilir.
+
+![Teknik Çizim Paneli](teknik_cizim_panel.png)
+
+---
+
+### Teknik Çizim Örneği
+
+Girilen veya PDF dosyasından alınan proje bilgilerine göre ölçülendirilmiş teknik çizimler oluşturulur.
+
+![Teknik Çizim Örneği](teknik_cizim.png)
+
+---
+
+### İmalat Onay Formu
+
+Ürün ve ölçü bilgileri kullanılarak üretime uygun imalat onay formu hazırlanır ve PDF çıktısı oluşturulur.
+
+![İmalat Onay Formu](imalat_onayform_örnek.png)
+
+---
+
+## Modüller
+
+### 1. Teknik Çizim ve Sözleşme Modülü
+
+Teknik modül, teklif ve sözleşme belgelerindeki bilgileri okuyarak teknik çıktılara dönüştürür.
+
+#### Özellikler
 
 - PDF teklif ve sözleşme dosyası yükleme
 - PDF içerisindeki proje bilgilerinin okunması
-- Müşteri ve proje bilgilerinin otomatik ayrıştırılması
-- Modül, ölçü ve ürün bilgilerinin tespit edilmesi
+- Müşteri bilgilerinin otomatik ayrıştırılması
+- Ürün, modül ve ölçü bilgilerinin tespit edilmesi
 - SVG tabanlı teknik çizim oluşturma
 - Teknik çizimi PDF olarak dışa aktarma
 - Sözleşme belgesini PDF olarak oluşturma
 - Sözleşme belgesini Word formatında oluşturma
-- Ürün kataloğu üzerinden sistem detaylarının eşleştirilmesi
-- Cephe ve ürün detay görsellerinin kullanılması
+- Ürün kataloğu üzerinden sistem detaylarını eşleştirme
+- Cephe ve ürün detay görsellerini kullanma
 
----
+### 2. İmalat Onay Formu Modülü
 
-## İmalat Onay Formu Modülü
+İmalat modülü, üretime gönderilecek proje bilgilerinin düzenlenmesini ve onay formunun hazırlanmasını sağlar.
 
-![İmalat Onay Modülü](assets/imalat.jpg)
+#### Özellikler
 
-İmalat modülü, üretime gönderilecek proje bilgilerinin düzenlenmesini ve imalat onay formunun hazırlanmasını sağlar.
-
-### Özellikler
-
-- Müşteri ve proje bilgilerinin girilmesi
-- Ürün ölçülerinin tanımlanması
-- Manuel teknik çizim oluşturma
-- Görsel destekli çizim hazırlama
+- Müşteri ve proje bilgilerini girme
+- Ürün ölçülerini tanımlama
+- Otomatik teknik görünüş oluşturma
+- Manuel teknik çizim hazırlama
 - Düzenlenebilir CAD çalışma alanı
-- Otomatik oluşturulan çizimi CAD alanına aktarma
+- Otomatik çizimi CAD alanına aktarma
+- Teknik açıklama ve not ekleme
 - İmalat onay formu oluşturma
-- Formu PDF formatında dışa aktarma
-- Teknik not ve açıklama alanları
-- Projeye özel ölçülendirme
-
----
-
-## Proje Görselleri
-
-Ana portalın gerçek çalışma ekran görüntüsünü repoya `proje-ekrani.png` adıyla yükledikten sonra aşağıdaki alan otomatik olarak görünecektir.
-
-![Otomasyon Ana Paneli](proje-ekrani.png)
+- Formu PDF olarak dışa aktarma
 
 ---
 
@@ -77,10 +86,10 @@ Ana portalın gerçek çalışma ekran görüntüsünü repoya `proje-ekrani.png
 - JavaScript
 - SVG
 - Composer
-- PDF Parser
 - Dompdf
 - PHPWord
-- GD Extension
+- PDF Parser
+- PHP GD Extension
 
 ---
 
@@ -114,5 +123,10 @@ technical-production-automation/
 │   ├── generate_pdf.php
 │   └── index.php
 │
+├── ana-panel.png
+├── teknik_cizim_panel.png
+├── teknik_cizim.png
+├── imalat_onayform_örnek.png
 ├── .gitignore
+├── README.md
 └── index.php
