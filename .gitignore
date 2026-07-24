@@ -1,0 +1,15 @@
+teknik/vendor/
+teknik/uploads/
+teknik/outputs/
+
+imalat/uploads/
+imalat/outputs/
+
+.vscode/
+*/.vscode/
+
+.env
+*.env
+
+.DS_Store
+Thumbs.db
